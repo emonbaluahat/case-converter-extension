@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Converter</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <svg class="logo-icon" viewBox="0 0 28 28" width="28" height="28">
+          <rect x="2" y="4" width="24" height="20" rx="3" fill="var(--accent)" opacity="0.15"/>
+          <rect x="2" y="4" width="24" height="20" rx="3" stroke="var(--accent)" stroke-width="1.5" fill="none"/>
+          <text x="4" y="20" font-size="12" font-weight="800" fill="var(--accent)" font-family="system-ui">Aa</text>
+        </svg>
+        <div class="logo-text">
+          <h1>Case Converter</h1>
+          <span class="subtitle">Any to Title Case</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="status-card" id="statusCard">
+      <div class="status-indicator">
+        <div class="status-dot" id="statusDot"></div>
+        <span id="statusText" class="status-text">Loading...</span>
+      </div>
+    </div>
+
+    <div class="toggle-group">
+      <div class="toggle-row">
+        <div class="toggle-label">
+          <span class="toggle-title">Global</span>
+          <span class="toggle-desc">Enable on all sites</span>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" id="globalToggle">
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+
+      <div class="divider-row"></div>
+
+      <div class="toggle-row" id="siteToggleRow">
+        <div class="toggle-label">
+          <span class="toggle-title" id="siteName">Current Site</span>
+          <span class="toggle-desc" id="siteDesc">Enable on this domain</span>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" id="siteToggle">
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="stats">
+      <div class="stat-item">
+        <span class="stat-value" id="charCount">0</span>
+        <span class="stat-label">Chars Converted</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-value" id="conversionCount">0</span>
+        <span class="stat-label">Conversions</span>
+      </div>
+    </div>
+
+    <footer>
+      <button class="settings-btn" id="settingsBtn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+        </svg>
+        Settings
+      </button>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

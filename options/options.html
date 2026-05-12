@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Converter - Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-content">
+        <svg class="header-icon" viewBox="0 0 28 28" width="32" height="32">
+          <rect x="2" y="4" width="24" height="20" rx="3" fill="var(--accent)" opacity="0.15"/>
+          <rect x="2" y="4" width="24" height="20" rx="3" stroke="var(--accent)" stroke-width="1.5" fill="none"/>
+          <text x="4" y="20" font-size="12" font-weight="800" fill="var(--accent)" font-family="system-ui">Aa</text>
+        </svg>
+        <div>
+          <h1>Case Converter</h1>
+          <p class="subtitle">Settings</p>
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2 class="section-title">Global Settings</h2>
+      <div class="card">
+        <div class="setting-row">
+          <div class="setting-info">
+            <span class="setting-name">Global Enabled</span>
+            <span class="setting-desc">Master switch for all websites</span>
+          </div>
+          <label class="toggle">
+            <input type="checkbox" id="globalToggle">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Site Settings</h2>
+      <div class="card" id="siteList">
+        <div class="empty-state" id="emptyState">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+          </svg>
+          <p>No sites configured yet.</p>
+          <p class="empty-hint">Toggle sites from the extension popup to manage them here.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Statistics</h2>
+      <div class="card">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-value" id="charCount">0</span>
+            <span class="stat-label">Characters Converted</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" id="conversionCount">0</span>
+            <span class="stat-label">Conversions</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title section-title--danger">Danger Zone</h2>
+      <div class="card card--danger">
+        <div class="danger-content">
+          <div>
+            <p class="danger-title">Reset All Settings</p>
+            <p class="danger-desc">Clear all settings, site preferences, and statistics.</p>
+          </div>
+          <button class="btn-danger" id="resetBtn">Reset</button>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>

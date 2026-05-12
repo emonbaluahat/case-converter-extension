@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Case Converter - Any to Title Case",
+  "version": "1.0.0",
+  "description": "Real-time text case conversion to Title Case (Abc Def Ghi) on any website",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/content.js"],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Case Converter"
+  },
+  "options_page": "options/options.html",
+  "background": {
+    "service_worker": "background/background.js",
+    "type": "module"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
